@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FAQ</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body style="background-color: #eeee">
+		<header>
+			<section class="text-center pt-5">
+				<div class="container">
+					<h1 class="fs-1 fw-bold text-primary">Frequently Asked Questions</h1>
+					<hr class="w-50 m-auto text-danger" />
+				</div>
+			</section>
+		</header>
+		<!-- Body section Start  -->
+		<main>
+			<section class="m-auto mt-5">
+				<div class="container">
+					<div class="accordion" id="accordionPanelsStayOpenExample">
+						<div class="accordion-item my-3">
+							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+								<button
+									class="accordion-button fw-bold fs-5"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseOne"
+									aria-expanded="true"
+									aria-controls="panelsStayOpen-collapseOne"
+								>
+									what is the difference between local storage and session
+									storage?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseOne"
+								class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingOne"
+							>
+								<div class="accordion-body">
+									localStorage and sessionStorage are relatively new APIs
+									(meaning, not all legacy browsers will support them) and are
+									near identical (both in APIs and capabilities) with the sole
+									exception of persistence. sessionStorage (as the name
+									suggests) is only available for the duration of the browser
+									session (and is deleted when the tab or window is closed) - it
+									does, however, survive page reloads (source DOM Storage guide
+									- Mozilla Developer Network). Clearly, if the data you are
+									storing needs to be available on an ongoing basis then
+									localStorage is preferable to sessionStorage - although you
+									should note both can be cleared by the user so you should not
+									rely on the continuing existence of data in either case.
+									localStorage and sessionStorage are perfect for persisting
+									non-sensitive data needed within client scripts between pages
+									(for example: preferences, scores in games). The data stored
+									in localStorage and sessionStorage can easily be read or
+									changed from within the client/browser so should not be relied
+									upon for storage of sensitive or security-related data within
+									applications.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item my-3">
+							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+								<button
+									class="accordion-button collapsed fw-bold fs-5"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseTwo"
+									aria-expanded="false"
+									aria-controls="panelsStayOpen-collapseTwo"
+								>
+									what is the difference between global scope and block scope?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseTwo"
+								class="accordion-collapse collapse"
+								aria-labelledby="panelsStayOpen-headingTwo"
+							>
+								<div class="accordion-body">
+									Function Scope: When a variable is declared inside a function,
+									it is only accessible within that function and cannot be used
+									outside that function. Block Scope: A variable when declared
+									inside the if or switch conditions or inside for or while
+									loops, are accessible within that particular condition or
+									loop.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item my-3">
+							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+								<button
+									class="accordion-button collapsed fw-bold fs-5"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseThree"
+									aria-expanded="false"
+									aria-controls="panelsStayOpen-collapseThree"
+								>
+									How to work event loop in javaScript?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseThree"
+								class="accordion-collapse collapse"
+								aria-labelledby="panelsStayOpen-headingThree"
+							>
+								<div class="accordion-body">
+									The Event Loop has one simple job — to monitor the Call Stack
+									and the Callback Queue. If the Call Stack is empty, the Event
+									Loop will take the first event from the queue and will push it
+									to the Call Stack, which effectively runs it. Such an
+									iteration is called a tick in the Event Loop.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item my-3">
+							<h2 class="accordion-header" id="panelsStayOpen-headingFour">
+								<button
+									class="accordion-button collapsed fw-bold fs-5"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseFour"
+									aria-expanded="false"
+									aria-controls="panelsStayOpen-collapseFour"
+								>
+									How can we get undefined in javascript?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseFour"
+								class="accordion-collapse collapse"
+								aria-labelledby="panelsStayOpen-headingFour"
+							>
+								<div class="accordion-body">
+									A variable that has not been assigned a value is of type
+									undefined . A method or statement also returns undefined if
+									the variable that is being evaluated does not have an assigned
+									value. A function returns undefined if a value was not
+									returned .
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- Body section End -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
