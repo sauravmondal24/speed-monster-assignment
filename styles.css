@@ -32,6 +32,7 @@ body {
 	);
 	backdrop-filter: blur(5px);
 	margin-bottom: 30px;
+	padding: 5px 10px;
 }
 
 #display {
@@ -148,13 +149,14 @@ button {
 }
 
 .card {
-	width: 100%;
+	width: 30.33%;
 	height: 100%;
 	padding: 50px;
-	display: flex;
+	/* display: flex; */
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 30px;
+	padding: 20px 20px;
+	text-align: center;
 	color: white;
 	border-radius: 15px;
 	background: rgb(255, 255, 255);
@@ -164,7 +166,7 @@ button {
 		rgba(255, 255, 255, 0.05) 99.85%
 	);
 	backdrop-filter: blur(5px);
-	margin-bottom: 30px;
+	margin: 10px 0;
 }
 
 #modal-background {
@@ -188,5 +190,6 @@ button {
 	}
 	.card {
 		flex-direction: column;
+		width: 100%;
 	}
 }

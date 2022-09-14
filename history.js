@@ -3,6 +3,7 @@ const histories = document.getElementById('histories');
 function addHistory(questionText, timeTaken, errorCount) {
 	const newRow = document.createElement('div');
 	newRow.classList.add('card');
+	// newRow.classList.add('col-md-6');
 
 	newRow.innerHTML = `
   <h3>${questionText}</h3>
