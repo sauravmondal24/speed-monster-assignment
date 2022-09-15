@@ -10,7 +10,6 @@ let userText = '';
 let errorCount = 0;
 let startTime;
 let questionText = '';
-/* initializing text length */
 let textLength = 0;
 
 // Load and display question
