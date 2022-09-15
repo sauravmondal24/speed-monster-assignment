@@ -10,6 +10,9 @@ let userText = '';
 let errorCount = 0;
 let startTime;
 let questionText = '';
+/* initializing text length */
+let textLength = 0;
+// let speed = 0;
 
 // Load and display question
 fetch('./texts.json')
@@ -17,6 +20,8 @@ fetch('./texts.json')
 	.then((data) => {
 		questionText = data[Math.floor(Math.random() * data.length)];
 		question.innerHTML = questionText;
+		let text = questionText.split(' ');
+		textLength = text.length;
 	});
 
 // checks the user typed character and displays accordingly
@@ -74,6 +79,9 @@ const gameOver = () => {
 	const finishTime = new Date().getTime();
 	const timeTaken = Math.round((finishTime - startTime) / 1000);
 
+	/* finding writing speed */
+	const writingSpeed = Math.round((textLength / timeTaken) * 60);
+
 	// show result modal
 	resultModal.innerHTML = '';
 	resultModal.classList.toggle('hidden');
@@ -86,11 +94,12 @@ const gameOver = () => {
 	resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>Your writing speed: <span class="bold">${writingSpeed}</span> word per minute</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-	addHistory(questionText, timeTaken, errorCount);
+	addHistory(questionText, timeTaken, errorCount, writingSpeed);
 
 	// restart everything
 	startTime = null;
