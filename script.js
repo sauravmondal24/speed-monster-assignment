@@ -12,7 +12,6 @@ let startTime;
 let questionText = '';
 /* initializing text length */
 let textLength = 0;
-// let speed = 0;
 
 // Load and display question
 fetch('./texts.json')
